@@ -11,7 +11,7 @@ RUN apt-get update -qq && apt-get install -y \
   unzip \
   default-mysql-client 
 RUN bun upgrade
-COPY package.json bun.lockb .
-COPY packages packages
-RUN bun install --frozen-lockfile
+COPY package.json bun.lockb ./
+COPY packages ./packages
+RUN bun install
 CMD sh -c "/bin/bash"
