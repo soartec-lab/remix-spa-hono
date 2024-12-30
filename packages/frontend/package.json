@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@remix-spa-hono/frontend",
   "private": true,
   "sideEffects": false,
   "type": "module",
