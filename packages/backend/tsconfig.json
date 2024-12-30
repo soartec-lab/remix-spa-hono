@@ -1,6 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "jsxImportSource": "hono/jsx"
-  }
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"jsxImportSource": "hono/jsx"
+	}
 }
