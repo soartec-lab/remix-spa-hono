@@ -1,7 +1,7 @@
 {
 	"name": "@remix-spa-hono/backend",
 	"scripts": {
-		"dev": "bun run --hot src/index.ts",
+		"dev": "bun run --hot src/api.ts",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write --unsafe ./"
 	},

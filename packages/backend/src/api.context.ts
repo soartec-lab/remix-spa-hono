@@ -6,7 +6,7 @@
  */
 import type { Context, Env } from "hono";
 
-import { ListPetsParams, Pets, ShowPetByIdParams } from "./api.schemas";
+import { ListPetsParams, Pets, ShowPetByIdParams } from "./handlers/schemas";
 
 export type ListPetsContext<E extends Env = any> = Context<
 	E,

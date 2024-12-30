@@ -8,34 +8,46 @@ import { z as zod } from "zod";
 
 export const listPetsQueryLimitMax = 100;
 
-export const listPetsQueryParams = zod.object({
-	limit: zod.number().max(listPetsQueryLimitMax).nullish(),
-});
+export const listPetsQueryParams = zod
+	.object({
+		limit: zod.coerce.number().max(listPetsQueryLimitMax).nullish(),
+	})
+	.strict();
 
-export const listPetsResponseItem = zod.object({
-	id: zod.number(),
-	name: zod.string(),
-	tag: zod.string().optional(),
-});
+export const listPetsResponseItem = zod
+	.object({
+		id: zod.coerce.number(),
+		name: zod.coerce.string(),
+		tag: zod.coerce.string().optional(),
+	})
+	.strict();
 export const listPetsResponse = zod.array(listPetsResponseItem).max(100);
 
-export const createPetsBodyItem = zod.object({
-	id: zod.number(),
-	name: zod.string(),
-	tag: zod.string().optional(),
-});
+export const createPetsBodyItem = zod
+	.object({
+		id: zod.coerce.number(),
+		name: zod.coerce.string(),
+		tag: zod.coerce.string().optional(),
+	})
+	.strict();
 export const createPetsBody = zod.array(createPetsBodyItem).max(100);
 
-export const showPetByIdParams = zod.object({
-	petId: zod.string(),
-});
+export const showPetByIdParams = zod
+	.object({
+		petId: zod.coerce.string(),
+	})
+	.strict();
 
-export const showPetByIdQueryParams = zod.object({
-	page: zod.string(),
-});
+export const showPetByIdQueryParams = zod
+	.object({
+		page: zod.coerce.string(),
+	})
+	.strict();
 
-export const showPetByIdResponse = zod.object({
-	id: zod.number(),
-	name: zod.string(),
-	tag: zod.string().optional(),
-});
+export const showPetByIdResponse = zod
+	.object({
+		id: zod.coerce.number(),
+		name: zod.coerce.string(),
+		tag: zod.coerce.string().optional(),
+	})
+	.strict();

@@ -6,9 +6,9 @@
  */
 import { Hono } from "hono";
 
-import { createPetsHandlers } from "./controllers/createPets";
-import { listPetsHandlers } from "./controllers/listPets";
-import { showPetByIdHandlers } from "./controllers/showPetById";
+import { createPetsHandlers } from "./handlers/createPets";
+import { listPetsHandlers } from "./handlers/listPets";
+import { showPetByIdHandlers } from "./handlers/showPetById";
 
 const app = new Hono();
 
