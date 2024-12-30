@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `Pet` (
+CREATE TABLE `pets` (
     `id` BIGINT NOT NULL AUTO_INCREMENT,
 
     PRIMARY KEY (`id`)
