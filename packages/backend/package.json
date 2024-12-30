@@ -8,6 +8,7 @@
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.2",
 		"hono": "^4.6.15",
+		"prisma": "^6.1.0",
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {
