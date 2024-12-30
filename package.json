@@ -2,14 +2,14 @@
   "name": "remix-spa-hono",
   "private": true,
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "devDependencies": {
     "@types/bun": "latest",
     "biome": "^0.3.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "scripts": {
   }
 }
