@@ -1,6 +1,6 @@
 {
 	"extends": ["../../biome.json"],
 	"linter": {
-		  "ignore": ["client/**/*.ts"]
+		"ignore": ["client/**/*.ts"]
 	}
 }
