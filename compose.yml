@@ -28,6 +28,14 @@ services:
       API_URL: openapi.yml
     ports:
       - "8080:8080"
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./packages/backend/db/mysql_data:/var/lib/mysql
 
 volumes:
   node_modules:
