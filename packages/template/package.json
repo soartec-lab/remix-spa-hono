@@ -1,0 +1,16 @@
+{
+	"name": "@remix-spa-hono/remplate",
+	"module": "index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun index.ts",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write --unsafe ./"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
