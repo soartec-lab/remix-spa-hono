@@ -14,12 +14,20 @@ services:
       - ./.devcontainer/.vimrc:/root/.vimrc
       - node_modules:/app/node_modules
   prism:
-    image: stoplight/prism:4
+    image: stoplight/prism:5
     ports:
       - "5177:4010"
-    command: mock -h 0.0.0.0 /openapi.yml
+    command: mock -h 0.0.0.0 /openapi/openapi.yml
     volumes:
-      - ./openapi/_generated.yaml:/openapi.yml
+      - ./openapi:/openapi
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    volumes:
+      - ./openapi/openapi.yaml:/usr/share/nginx/html/openapi.yml
+    environment:
+      API_URL: openapi.yml
+    ports:
+      - "8080:8080"
 
 volumes:
   node_modules:
