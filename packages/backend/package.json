@@ -4,7 +4,8 @@
 		"dev": "bun run --hot src/api.ts",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write --unsafe ./",
-		"db:migrate:dev": "prisma migrate dev --schema=./db/schema.prisma"
+		"db:migrate:dev": "prisma migrate dev --schema=./db/schema.prisma",
+		"db:generate": "prisma generate --schema=./db/schema.prisma"
 	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.2",
