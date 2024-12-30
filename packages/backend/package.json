@@ -6,7 +6,9 @@
 		"lint:fix": "biome check --write --unsafe ./"
 	},
 	"dependencies": {
-		"hono": "^4.6.15"
+		"@hono/zod-validator": "^0.4.2",
+		"hono": "^4.6.15",
+		"zod": "^3.24.1"
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
