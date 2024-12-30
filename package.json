@@ -1,16 +1,18 @@
 {
-  "name": "remix-spa-hono",
-  "private": true,
-  "type": "module",
-  "workspaces": ["packages/*"],
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "dev": "bun --filter '*' dev"
-  }
+	"name": "remix-spa-hono",
+	"private": true,
+	"type": "module",
+	"workspaces": ["packages/*"],
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"dev": "bun --filter '*' dev",
+		"lint": "bun --filter '*' lint",
+		"lint:fix": "bun --filter '*' lint:fix"
+	}
 }
