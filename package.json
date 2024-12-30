@@ -4,8 +4,8 @@
   "type": "module",
   "workspaces": ["packages/*"],
   "devDependencies": {
-    "@types/bun": "latest",
-    "biome": "^0.3.3"
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
