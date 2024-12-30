@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: .
+    working_dir: /app
+    tty: true
+    stdin_open: true
+    ports:
+      - "5175:5175" # React Router dev server
+      - "4175:4175" # vite preview server
+    volumes:
+      - ./:/app
+      - ~/.bashrc:/root/.bashrc
+      - ./.devcontainer/.vimrc:/root/.vimrc
+      - node_modules:/app/node_modules
+  prism:
+    image: stoplight/prism:4
+    ports:
+      - "5177:4010"
+    command: mock -h 0.0.0.0 /openapi.yml
+    volumes:
+      - ./openapi/_generated.yaml:/openapi.yml
+
+volumes:
+  node_modules:
