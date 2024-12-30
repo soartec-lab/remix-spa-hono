@@ -4,42 +4,38 @@
  * Swagger Petstore
  * OpenAPI spec version: 1.0.0
  */
-import { z as zod } from 'zod';
+import { z as zod } from "zod";
 
 export const listPetsQueryLimitMax = 100;
 
-
 export const listPetsQueryParams = zod.object({
-  "limit": zod.number().max(listPetsQueryLimitMax).nullish()
-})
+	limit: zod.number().max(listPetsQueryLimitMax).nullish(),
+});
 
 export const listPetsResponseItem = zod.object({
-  "id": zod.number(),
-  "name": zod.string(),
-  "tag": zod.string().optional()
-})
-export const listPetsResponse = zod.array(listPetsResponseItem).max(100)
-
+	id: zod.number(),
+	name: zod.string(),
+	tag: zod.string().optional(),
+});
+export const listPetsResponse = zod.array(listPetsResponseItem).max(100);
 
 export const createPetsBodyItem = zod.object({
-  "id": zod.number(),
-  "name": zod.string(),
-  "tag": zod.string().optional()
-})
-export const createPetsBody = zod.array(createPetsBodyItem).max(100)
-
+	id: zod.number(),
+	name: zod.string(),
+	tag: zod.string().optional(),
+});
+export const createPetsBody = zod.array(createPetsBodyItem).max(100);
 
 export const showPetByIdParams = zod.object({
-  "petId": zod.string()
-})
+	petId: zod.string(),
+});
 
 export const showPetByIdQueryParams = zod.object({
-  "page": zod.string()
-})
+	page: zod.string(),
+});
 
 export const showPetByIdResponse = zod.object({
-  "id": zod.number(),
-  "name": zod.string(),
-  "tag": zod.string().optional()
-})
-
+	id: zod.number(),
+	name: zod.string(),
+	tag: zod.string().optional(),
+});

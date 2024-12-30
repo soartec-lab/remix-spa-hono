@@ -5,32 +5,31 @@
  * OpenAPI spec version: 1.0.0
  */
 export type ShowPetByIdParams = {
-/**
- * pagination key number
- */
-page: string;
+	/**
+	 * pagination key number
+	 */
+	page: string;
 };
 
 export type ListPetsParams = {
-/**
- * How many items to return at one time (max 100)
- */
-limit?: number | null;
+	/**
+	 * How many items to return at one time (max 100)
+	 */
+	limit?: number | null;
 };
 
 export interface Error {
-  code: number;
-  message: string;
+	code: number;
+	message: string;
 }
 
 export interface Pet {
-  id: number;
-  name: string;
-  tag?: string;
+	id: number;
+	name: string;
+	tag?: string;
 }
 
 /**
  * @maxItems 100
  */
 export type Pets = Pet[];
-

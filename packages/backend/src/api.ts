@@ -4,36 +4,30 @@
  * Swagger Petstore
  * OpenAPI spec version: 1.0.0
  */
-import {
-  Hono
-} from 'hono'
+import { Hono } from "hono";
 
-import { listPetsHandlers } from './controllers/listPets';
-import { createPetsHandlers } from './controllers/createPets';
-import { showPetByIdHandlers } from './controllers/showPetById';
+import { createPetsHandlers } from "./controllers/createPets";
+import { listPetsHandlers } from "./controllers/listPets";
+import { showPetByIdHandlers } from "./controllers/showPetById";
 
-
-const app = new Hono()
+const app = new Hono();
 
 /**
  * @summary List all pets
  */
 
-app.get('/pets',...listPetsHandlers)
-
+app.get("/pets", ...listPetsHandlers);
 
 /**
  * @summary Create a pet
  */
 
-app.post('/pets',...createPetsHandlers)
-
+app.post("/pets", ...createPetsHandlers);
 
 /**
  * @summary Info for a specific pet
  */
 
-app.get('/pets/:petId',...showPetByIdHandlers)
+app.get("/pets/:petId", ...showPetByIdHandlers);
 
-
-export default app
+export default app;
