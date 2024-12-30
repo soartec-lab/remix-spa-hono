@@ -1,0 +1,10 @@
+{
+  "name": "@remix-spa-hono/frontend",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

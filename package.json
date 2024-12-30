@@ -2,6 +2,9 @@
   "name": "remix-spa-hono",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "biome": "^0.3.3"
