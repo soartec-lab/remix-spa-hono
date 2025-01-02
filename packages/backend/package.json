@@ -1,7 +1,7 @@
 {
 	"name": "@remix-spa-hono/backend",
 	"scripts": {
-		"dev": "bun run --hot src/api.ts",
+		"dev": "bun run --hot src/app.ts",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write --unsafe ./",
 		"db:migrate:dev": "prisma migrate dev --schema=./db/schema.prisma",
