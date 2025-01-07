@@ -36,6 +36,7 @@ services:
       - 3306:3306
     volumes:
       - ./packages/backend/db/mysql_data:/var/lib/mysql
+    command: mysqld --innodb_use_native_aio=0
 
 volumes:
   node_modules:
