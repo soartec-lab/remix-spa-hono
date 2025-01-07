@@ -11,8 +11,15 @@ export const listPetsHandlers = factory.createHandlers(
 	zValidator("query", listPetsQueryParams),
 	zValidator("response", listPetsResponse),
 	async (c: ListPetsContext) => {
-		const pets = await Pet.findMany();
+		const pet = await Pet.findFirst({ where: { id: 1 } });
 
-		return c.json(pets);
+		console.log(pet?.displayName);
+
+		return c.json([
+			{
+				id: pet?.id,
+				name: pet?.name,
+			},
+		]);
 	},
 );

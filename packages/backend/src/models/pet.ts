@@ -1,14 +1,24 @@
 import { PrismaClient } from "@prisma/client";
+import type { Pet as PetModel } from "../handlers/schemas";
 
-const prisma = new PrismaClient();
-const db = prisma.pets;
+const prisma = new PrismaClient().$extends({
+	model: {
+		pets: {
+			async FindByName(name: string) {
+				return await prisma.pets.findFirst({ where: { name } });
+			},
+		},
+	},
+	result: {
+		pets: {
+			displayName: {
+				needs: { id: true, name: true },
+				compute(pet: PetModel) {
+					return `${pet.name} <${pet.id}>`;
+				},
+			},
+		},
+	},
+});
 
-export const Pet = {
-	...prisma.pets,
-	async all() {
-		return db.findMany();
-	},
-	async find(id: number) {
-		return db.findUnique({ where: { id } });
-	},
-};
+export const Pet = prisma.pets;
